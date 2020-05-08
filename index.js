@@ -11,7 +11,7 @@ const flash = require('connect-flash');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
-const {server: {PORT},secretKey} = require('./config');
+const {server: {PORT}, secretKey} = require('./config');
 const db = require('./db');
 
 const app = express();
@@ -31,7 +31,11 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 
-app.use(session({ secret: secretKey }));
+app.use(session({
+    secret: secretKey,
+    resave: true,
+    saveUninitialized: true
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
