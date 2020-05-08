@@ -10,7 +10,6 @@
 </head>
 <body>
 <div class="container">
-
     <div class="page-header text-center">
         <h1><span class="fa fa-anchor"></span> Profile Page</h1>
         <a href="/logout" class="btn btn-default btn-sm">Logout</a>
@@ -22,10 +21,10 @@
             <div class="well">
                 <p>
                     <strong>Id</strong>: <%= user._id %><br>
-                    <strong>Email</strong>: <%= user.local.email %><br>
-                    <strong>First Name</strong>: <%= user.local.firstName %>
-                    <strong>Last Name</strong>: <%= user.local.lastName %>
-                    <strong>Date of Birth</strong>: <%= user.local.dob %>
+                    <strong>Email</strong>: <%= user.email %><br>
+                    <strong>First Name</strong>: <%= user.firstName %><br>
+                    <strong>Last Name</strong>: <%= user.lastName %><br>
+                    <strong>Date of Birth</strong>: <%= user.dob %>
                 </p>
 
             </div>

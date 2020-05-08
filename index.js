@@ -36,6 +36,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
+require('./config/passport')(passport);
 require('./routes')(app, passport);
 
 // catch 404 and forward to error handler
