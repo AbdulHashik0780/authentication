@@ -5,7 +5,7 @@ module.exports = {
     server: {
         PORT: process.env.PORT || 6000,
     },
-    secretKey: process.env.JWT_SECRET_KEY,
+    secretKey: process.env.secret_key,
     database: {
         dbURI: process.env.dbURI,
         poolSize: process.env.poolSize,
